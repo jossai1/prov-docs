@@ -18,15 +18,6 @@ document
   prefix gb-mirror <http://www.mirror.co.uk/news/uk-news/>
   prefix gb-art2 <https://www.theguardian.com/politics/2016/jun/24/>
 
-
-  entity(gb:britian.0, [prov:type='ex:Country'])//not in eu
-  entity(gb:britian.1, [prov:type='ex:Country'])//in eu
-  entity(gb:britian.2, [prov:type='ex:Country'])//with no pm
-  entity(gb:britian.3, [prov:type='ex:Country'])//with new pm -tmay
-  entity(eu:eu.0, [prov:type='ex:Country'])//with nno gb
-  entity(eu:eu.1, [prov:type='ex:Country'])//with gb
-  entity(eu:eu.2, [prov:type='ex:Country'])//with no gb..yet to formally happen
-
  
 
 endDocument
