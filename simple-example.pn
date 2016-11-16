@@ -1,0 +1,7 @@
+document
+  prefix ex <http://example.com>
+  
+  wasAssociatedWith(ex:Alice, ex:Bob, -)
+  agent(ex:Bob)
+  activity(ex:Alice, -, -)
+endDocument
