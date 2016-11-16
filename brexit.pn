@@ -1,7 +1,9 @@
 document
+
   prefix ex <http://example.org/>
   prefix dcterms <http://purl.org/dc/terms/>
   prefix foaf <http://xmlns.com/foaf/0.1/>
+  
   prefix gb <http://www.infoplease.com/country/united-kingdom.html>
   prefix gov-people <https://www.gov.uk/government/people/>
   prefix gb-ref <https://www.gov.uk/government/topical-events/eu-referendum>
@@ -28,7 +30,7 @@ document
   entity(eu:european-union, [prov:type='ex:Organisation'])
   entity(gb: Brexit,prov:label="A term derived from Grexit")
   entity(gb-brex: Brexit, [prov:type='ex:Term'])
-  entity(gb-ref: Referendum, [prov:type='ex:Public Vote', dcterms:title="Should the United Kingdom remain a member of the European Union or leave the European Union?" ])
+  entity(gb-ref: Referendum, [prov:type='ex:PublicVote', dcterms:title="Should the United Kingdom remain a member of the European Union or leave the European Union?" ])
   entity(gb-resign:david-camerons-resignation-speech-full-8271809,[prov:type='ex:Speech',dcterms:title=" David Cameron's resignation speech in full"])  
   entity(gb-speech:european-council-meeting-28-june-2016-pm-press-conference--2, [prov:type='ex:Speech', dcterms:title="European Council meeting"])  
   entity(gb-speech:statement-from-the-new-prime-minister-theresa-may, [prov:type='ex:Speech', dcterms:title="Statement from the new Prime Minister Theresa May"] )
@@ -51,9 +53,9 @@ document
 
 
 //agents
-  agent(gb:Labour Party,[prov:type='ex:Political Party'])
-  agent(gb:UKIP,[prov:type='ex:Political Party'])
-  agent(gb:Conservative Party,[prov:type='ex:Political Party'])
+  agent(gb:Labour Party,[prov:type='ex:PoliticalParty'])
+  agent(gb:UKIP,[prov:type='ex:PoliticalParty'])
+  agent(gb:Conservative Party,[prov:type='ex:PoliticalParty'])
   agent(gov-people:david-cameron,[prov:type='ex:Person', foaf:name='David Cameron'])
   agent(gov-people:theresa-may,[prov:type='ex:Person', foaf:name='Theresa May'])
   agent(the-gaurdian: The Gaurdian,[prov:type='ex:Newspaper'])
