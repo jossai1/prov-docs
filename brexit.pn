@@ -63,11 +63,15 @@ document
   wasDerivedFrom(eu:eu.2,eu:eu.1) //havent left yet 
 
   used(gb:joinEU, gb:britian.0,1973-01-01T09:00:00,-)
-  used(gb-brex:Brexit,gb-ref:eu-referendum, 2016-06-23T09:00:00,-)
+  used(gb:british-choose-brexit, gb-ref:eu-referendum, 2016-06-23T09:00:00,-)
   used(gb:david-cameron-resigns-as-pm,gb:britian.1,2016-06-24T09:00:00,-)
   used(gb:t-may-inaugurated-as-new-pm,gb:britian.2,2016-07-13T09:00:00,-)
 
+
   wasGeneratedBy(eu:eu.1,gb:joinEU,1973-01-01T09:00:00,-)
+  wasGeneratedBy(gb-art2:david-cameron-resigns-after-uk-votes-to-leave-european-union,gb:british-choose-brexit,-,-)
+  wasGeneratedBy(gb-art1:bba-chief-warns-some-bankers-could-leave-london-if-city-does-not,gb:british-choose-brexit,-,-)
+  wasGeneratedBy(gb-speech:european-council-october-2016-prime-ministers-press-statement,gb:david-cameron-attends-last-eu-council-as-pm,-,-)
   wasGeneratedBy(gb:britian.2,gb:david-cameron-resigns-as-pm,-,-)
   wasGeneratedBy(gb-resign:david-camerons-resignation-speech-full-8271809,gb:david-cameron-resigns-as-pm,-,-)
   wasGeneratedBy(gb-speech:european-council-meeting-28-june-2016-pm-press-conference--2,gb:david-cameron-attends-last-eu-council-as-pm,-,-)
@@ -75,13 +79,18 @@ document
   wasGeneratedBy(gb-speech:statement-from-the-new-prime-minister-theresa-may,gb:t-may-inaugurated-as-new-pm,-,-)
 
 
+  wasAssociatedWith(gb:t-may-inaugurated-as-new-pm,gov-people:theresa-may)
   wasAssociatedWith(gb:joinEU,gb:Conservative)
   wasAssociatedWith(gb:david-cameron-resigns-as-pm,gov-people:david-cameron)
   wasAssociatedWith(gb:david-cameron-attends-last-eu-council-as-pm,gov-people:david-cameron)
-  wasAttributedTo(gb-ref: Referendum,gov-people:david-cameron)
+  
+  wasAttributedTo(gb-ref:eu-referendum,gov-people:david-cameron)
+  wasAttributedTo(gb-speech:statement-from-the-new-prime-minister-theresa-may,gov-people:theresa-may)
+
 
 
   actedOnBehalfOf(the-gaurdian-people:heatherstewart,the-gaurdian:The-Gaurdian)
+  actedOnBehalfOf(gov-people:david-cameron,gb:Conservative)
 
 
 
