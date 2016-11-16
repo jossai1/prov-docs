@@ -26,7 +26,7 @@ document
   entity(eu:eu.1, [prov:type='prov:Country'])//with gb
   //entity(eu:eu.2, [prov:type='prov:Country'])//with no gb..yet to formally happen
 
-  entity(eu:european-union, [prov:type='prov:Organisation'])
+  
   entity(gr-grex:grexit,[prov:type='prov:Term'])
   entity(gb-brex: Brexit, [prov:type='prov:Term'])
   entity(gb-ref:eu-referendum, [prov:type='ex:PublicVote', dcterms:title="Should the United Kingdom remain a member of the European Union or leave the European Union?"])
@@ -52,6 +52,7 @@ document
   agent(gov-people:theresa-may,[prov:type='ex:Person', foaf:name="Theresa May"])
   agent(the-gaurdian:The-Gaurdian,[prov:type='ex:Newspaper'])
   agent(the-gaurdian-people:heatherstewart,[prov:type='ex:Person', foaf:name="Heather Stewart"])
+  agent(eu:european-union, [prov:type='prov:Organisation'])
 
 
 //realtions
@@ -79,13 +80,15 @@ document
   wasGeneratedBy(gb-speech:statement-from-the-new-prime-minister-theresa-may,gb:t-may-inaugurated-as-new-pm,-,-)
 
 
-  wasAssociatedWith(gb:t-may-inaugurated-as-new-pm,gov-people:theresa-may)
-  wasAssociatedWith(gb:joinEU,gb:Conservative)
-  wasAssociatedWith(gb:david-cameron-resigns-as-pm,gov-people:david-cameron)
-  wasAssociatedWith(gb:david-cameron-attends-last-eu-council-as-pm,gov-people:david-cameron)
+  wasAssociatedWith(gb:t-may-inaugurated-as-new-pm, gov-people:theresa-may,-,-)
+  wasAssociatedWith(gb:joinEU,gb:Conservative,-,-)
+  wasAssociatedWith(gb:david-cameron-resigns-as-pm,gov-people:david-cameron,-,-)
+  wasAssociatedWith(gb:david-cameron-attends-last-eu-council-as-pm,gov-people:david-cameron,-,-)
+  wasAssociatedWith(gb:t-may-atrtends-first-eu-summit-as-new-pm,eu:european-union,-,-)
+  wasAssociatedWith(gb:t-may-atrtends-first-eu-summit-as-new-pm,gov-people:theresa-may,-,-)
   
-  wasAttributedTo(gb-ref:eu-referendum,gov-people:david-cameron)
-  wasAttributedTo(gb-speech:statement-from-the-new-prime-minister-theresa-may,gov-people:theresa-may)
+  wasAttributedTo(gb-ref:eu-referendum,gov-people:david-cameron,-,-)
+  wasAttributedTo(gb-speech:statement-from-the-new-prime-minister-theresa-may,gov-people:theresa-may,-,-)
 
 
 
