@@ -27,72 +27,7 @@ document
   entity(eu:eu.1, [prov:type='ex:Country'])//with gb
   entity(eu:eu.2, [prov:type='ex:Country'])//with no gb..yet to formally happen
 
-  entity(eu:european-union, [prov:type='ex:Organisation'])
-  entity(gb: Brexit,prov:label="A term derived from Grexit")
-  entity(gb-brex: Brexit, [prov:type='ex:Term'])
-  entity(gb-ref: Referendum, [prov:type='ex:PublicVote', dcterms:title="Should the United Kingdom remain a member of the European Union or leave the European Union?" ])
-  entity(gb-resign:david-camerons-resignation-speech-full-8271809,[prov:type='ex:Speech',dcterms:title=" David Cameron's resignation speech in full"])  
-  entity(gb-speech:european-council-meeting-28-june-2016-pm-press-conference--2, [prov:type='ex:Speech', dcterms:title="European Council meeting"])  
-  entity(gb-speech:statement-from-the-new-prime-minister-theresa-may, [prov:type='ex:Speech', dcterms:title="Statement from the new Prime Minister Theresa May"] )
-  entity(gb-speech:european-council-october-2016-prime-ministers-press-statement, [prov:type='ex:Speech',dcterms:title="European Council October 2016: Prime Minister's press statement"])
-  entity(gb-art1:bba-chief-warns-some-bankers-could-leave-london-if-city-does-not,[prov:type='ex:article', dcterms:title="BBA chief warns some bankers could leave London if City does not get strong Brexit deal"])
-  entity(gb-art2:david-cameron-resigns-after-uk-votes-to-leave-european-union, [prov:type='ex:article', dcterms:title="David Cameron resigns after UK votes to leave European Union"])
-
-  
-  
-  
-  //activities
-
-  activity(gb:joinEU, 1973-01-01,-)
-  activity(gb:british-choose-brexit, 2016-06-23,-)
-  activity(gb:david-cameron-resigns-as-pm, 2016-06-24T10:00:00.00Z)
-  activity(gb:david-cameron-attends-last-eu-council-as-pm, 2016-06-28,-)
-  activity(gb:t-may-inaugurated-as-new-pm, 2016-07-13,-)
-  activity(gb:t-may-atrtends-first-eu-summit-as-new-pm, 2016-10-21,-) 
-
-
-
-//agents
-  agent(gb:Labour Party,[prov:type='ex:PoliticalParty'])
-  agent(gb:UKIP,[prov:type='ex:PoliticalParty'])
-  agent(gb:Conservative Party,[prov:type='ex:PoliticalParty'])
-  agent(gov-people:david-cameron,[prov:type='ex:Person', foaf:name='David Cameron'])
-  agent(gov-people:theresa-may,[prov:type='ex:Person', foaf:name='Theresa May'])
-  agent(the-gaurdian: The Gaurdian,[prov:type='ex:Newspaper'])
-  agent(the-gaurdian-people: heatherstewart,[prov:type='ex:Person', foaf:name='Heather Stewart'])
-
-
-
-
-//realtions
-  wasDerivedFrom(gb-brex:brexit,gr-grex:grexit)
-  wasDerivedFrom(gb:GB.1,gb:GB.0)
-  wasDerivedFrom(gb:GB.2,gb:GB.1)
-  wasDerivedFrom(gb:GB.3,gb:GB.2)
-  wasDerivedFrom(eu:EU.1,eu:EU.0)
-  wasDerivedFrom(eu:EU.2,eu:EU.1) /havent left yet 
-
-  used(gb:joinEU,gb:GB.0)
-  used(gb-brex:brexit,gb-ref:Referendum)
-  used(gb:david-cameron-resigns-as-pm,gb:GB.1)
-  used(gb:t-may-inaugurated-as-new-pm,gb:GB.2,2016-07-13,-)
-  
-
-  wasGeneratedBy(eu:EU.1,gb:joinEU,1973-01-01,-)
-  wasGeneratedBy(gb:GB.2,gb:david-cameron-resigns-as-pm)
-  wasGeneratedBy(gb-resign:david-camerons-resignation-speech-full-8271809,gb:david-cameron-resigns-as-pm)
-  wasGeneratedBy(gb-speech:european-council-meeting-28-june-2016-pm-press-conference--2,gb:david-cameron-attends-last-eu-council-as-pm)
-  wasGeneratedBy(gb:GB.3,gb:t-may-inaugurated-as-new-pm)
-  wasGeneratedBy(gb-speech:statement-from-the-new-prime-minister-theresa-may,gb:t-may-inaugurated-as-new-pm)
-
-
-  wasAssociatedWith(gb:joinEU,gb:Conservative Party)
-  wasAssociatedWith(gb:david-cameron-resigns-as-pm,gov-people:david-cameron)
-  wasAssociatedWith(gb:david-cameron-attends-last-eu-council-as-pm,gov-people:david-cameron)
-  wasAttributedTo(gb-ref: Referendum,gov-people:david-cameron)
-
-
-  actedOnBehaOf(the-gaurdian-people: heatherstewart,the-gaurdian)
+ 
 
 endDocument
 
