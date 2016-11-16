@@ -24,7 +24,7 @@ document
   entity(gb:britian.3, [prov:type='prov:Country'])//with new pm -tmay
   entity(eu:eu.0, [prov:type='prov:Country'])//with nno gb
   entity(eu:eu.1, [prov:type='prov:Country'])//with gb
-  entity(eu:eu.2, [prov:type='prov:Country'])//with no gb..yet to formally happen
+  //entity(eu:eu.2, [prov:type='prov:Country'])//with no gb..yet to formally happen
 
   entity(eu:european-union, [prov:type='prov:Organisation'])
   entity(gr-grex:grexit,[prov:type='prov:Term'])
@@ -60,7 +60,7 @@ document
   wasDerivedFrom(gb:britian.2,gb:britian.1)
   wasDerivedFrom(gb:britian.3,gb:britian.2)
   wasDerivedFrom(eu:eu.1,eu:eu.0)
-  wasDerivedFrom(eu:eu.2,eu:eu.1) //havent left yet 
+  //wasDerivedFrom(eu:eu.2,eu:eu.1) //havent left yet 
 
   used(gb:joinEU, gb:britian.0,1973-01-01T09:00:00,-)
   used(gb:british-choose-brexit, gb-ref:eu-referendum, 2016-06-23T09:00:00,-)
