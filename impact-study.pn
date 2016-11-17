@@ -1,0 +1,77 @@
+document
+
+  prefix ex <http://example.org/>
+  prefix dcterms <http://purl.org/dc/terms/>
+  prefix foaf <http://xmlns.com/foaf/0.1/>
+  
+  prefix wais <http://www.wais.ecs.soton.ac.uk/>
+  prefix ecs-people <http://www.ecs.soton.ac.uk/people/>
+  prefix ieee <http://ieeexplore.ieee.org/document/>
+
+
+  entity(wais:Microcosm, [prov:type='prov:Service'])
+  entity(wais:Garlik, [prov:type='prov:Company'])
+  entity(wais:Experian.0, [prov:type='prov:Company'])
+  entity(wais:Experian.1, [prov:type='prov:Company'])
+  entity(wais:wais.0, [prov:type='prov:Group'])//original
+  entity(wais:wais.1, [prov:type='prov:Group'])//luc joins
+  entity(wais:wais.2, [prov:type='prov:Group'])
+  entity(ieee:1637364,[prov:type='prov:Paper',dcterms:title="The semantic web revisited"])
+  
+
+
+  activity(wais:wais-group-formation, 1990-01-01T09:00:00, -)
+  activity(wais:nigel-joins-wais-group, 2000-06-24T09:00:00,-)
+  activity(wais:luc-joins-wais-group, 1995-01-28T09:00:00,-)
+  activity(wais:publishPaper, 2006-01-28T09:00:00,-)  
+  activity(wais:acquisition, -,-) 
+
+//agents
+  agent(ecs-people:lavm,[prov:type='ex:Person', foaf:name="Luc Moreau"])
+  agent(ecs-people:berners-lee,[prov:type='ex:Person', foaf:name="Tim Berners-Lee"])
+  agent(wais:WAIS,[prov:type='ex:Group'])
+  agent(ecs-people:wh,[prov:type='ex:Person', foaf:name="Wendy Hall"])
+  agent(ecs-people:phl,[prov:type='ex:Person', foaf:name="Paul Lewis"])  
+  agent(ecs-people:nrs,[prov:type='ex:Person', foaf:name="Nigel Shadbolt"])
+  agent(ecs-people:hcd, [prov:type='ex:Person', foaf:name="Hugh C. Davis"])
+  agent(ecs-people:dder, [prov:type='ex:Person', foaf:name="David De Roure C. Davis"])
+  agent(ecs-people:lac, [prov:type='ex:Person', foaf:name="Leslie Carr"])
+
+
+//realtions prove edge
+  wasDerivedFrom(wais:wais.1,wais:wais.0)
+  wasDerivedFrom(wais:wais.2,wais:wais.1)
+  wasDerivedFrom(wais:Experian.1,wais:Experian.0)
+  wasDerivedFrom(wais:Experian.1,wais:Garlik)
+
+  used(wais:nigel-joins-wais-group, wais:wais.0,2000-01-01T09:00:00,-) 
+  used(wais:acquisition, wais:Garlik,-,-)  
+  used(wais:luc-joins-wais-group, wais:wais.0,2000-01-01T09:00:00,-)
+ 
+
+  wasGeneratedBy(wais:wais.1,wais:luc-joins-wais-group,1995-01-01T09:00:00,-)
+  wasGeneratedBy(wais:wais.2,wais:nigel-joins-wais-group,2000-01-01T09:00:00,-)
+  wasGeneratedBy(ieee:1637364,wais:publishPaper,2006-01-01T09:00:00,-)
+  wasGeneratedBy(wais:Experian.1,wais:acquisition,-,-)
+  
+
+
+  wasAssociatedWith(wais:wais-group-formation, wais:WAIS,-,-)
+  wasAssociatedWith(wais:wais-group-formation,ecs-people:wh,-,-)
+  wasAssociatedWith(wais:wais-group-formation,ecs-people:phl,-,-)
+  wasAssociatedWith(wais:wais-group-formation,ecs-people:hcd,-,-)
+  wasAssociatedWith(wais:wais-group-formation,ecs-people:dder,-,-)
+  wasAssociatedWith(wais:wais-group-formation,ecs-people:lac,-,-)
+  wasAssociatedWith(wais:luc-joins-wais-group,ecs-people:lavm,-,-)
+  wasAssociatedWith(wais:nigel-joins-wais-group,ecs-people:nrs,-,-)
+  wasAssociatedWith(wais:publishPaper,ecs-people:wh,-,-)
+  wasAssociatedWith(wais:publishPaper,ecs-people:berners-lee,-,-)
+  
+  
+  wasAttributedTo(wais:Garlik,wais:WAIS,-,-) 
+  wasAttributedTo(wais:Microcosm,wais:WAIS,2000-01-01T09:00:00,-)
+
+
+
+endDocument
+
